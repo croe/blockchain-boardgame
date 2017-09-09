@@ -1,0 +1,17 @@
+{
+  "name": "testrpc-node-proxy",
+  "version": "1.0.0",
+  "description": "testrpc-node-proxy.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "webpack -w"
+  },
+  "author": "Akihiro Kato",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "http-proxy": "^1.16.2"
+  },
+  "devDependencies": {}
+}

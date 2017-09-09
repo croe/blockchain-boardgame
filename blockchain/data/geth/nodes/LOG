@@ -1,0 +1,8 @@
+=============== Aug 31, 2017 (JST) ===============
+09:30:34.915475 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:30:34.916106 db@open opening
+09:30:34.918735 version@stat F·[] S·0B[] Sc·[]
+09:30:34.922041 db@janitor F·2 G·0
+09:30:34.922085 db@open done T·5.96459ms
+09:32:42.106965 db@close closing
+09:32:42.107236 db@close done T·269.105µs
