@@ -1,34 +1,16 @@
 {
-  "name": "wevj",
+  "name": "trustless-market",
   "version": "2.0.0",
-  "description": "Use browser VJ softwere.",
-  "main": "app.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "watch": "webpack -w"
+    "start": "node server.js"
   },
   "author": "Akihiro Kato",
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",
-    "jquery": "^3.1.1",
-    "midi": "^0.9.5",
     "mongoose": "^4.11.10",
-    "pixi.js": "^4.2.3",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "socket.io": "^1.7.1",
-    "three": "^0.79.0",
-    "x-gif": "^1.0.5"
-  },
-  "devDependencies": {
-    "babel-core": "^6.20.0",
-    "babel-loader": "^6.2.9",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "css-loader": "^0.26.1",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "socket.io": "^1.7.1"
   }
 }
