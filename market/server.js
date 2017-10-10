@@ -133,8 +133,8 @@ io.sockets.on('connection', function (socket) {
     User.find({player: msg.from}, function (err, _from) {
       User.find({player: msg.to}, function (err, _to) {
         if (_from[0].balance >= msg.val && _from[0].player !== _to[0].player) {
-          _from[0].update({balance: _from[0].balance - parseFloat(msg.val)}, function (err) {
-            _to[0].update({balance: _to[0].balance + parseFloat(msg.val)}, function (err) {
+          _from[0].update({balance: _from[0].balance - parseInt(msg.val)}, function (err) {
+            _to[0].update({balance: _to[0].balance + parseInt(msg.val)}, function (err) {
               socket.emit('send res');
               socket.broadcast.emit('send res');
             });
@@ -154,8 +154,8 @@ io.sockets.on('connection', function (socket) {
           _to[0].assetsBalance[msg.ind] = 0;
         }
         if (_from[0].assetsBalance[msg.ind] >= msg.val && _from[0].player !== _to[0].player) {
-          _from[0].assetsBalance[msg.ind] = _from[0].assetsBalance[msg.ind] - parseFloat(msg.val);
-          _to[0].assetsBalance[msg.ind] = _to[0].assetsBalance[msg.ind] + parseFloat(msg.val);
+          _from[0].assetsBalance[msg.ind] = Math.floor((parseFloat(_from[0].assetsBalance[msg.ind]) - parseFloat(msg.val)) * 10) / 10;
+          _to[0].assetsBalance[msg.ind] = Math.floor((parseFloat(_to[0].assetsBalance[msg.ind]) + parseFloat(msg.val)) * 10) / 10;
           _from[0].save();
           _to[0].save();
           _from[0].update({assetsBalance: _from[0].assetsBalance}, function (err) {

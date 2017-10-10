@@ -33,9 +33,9 @@ class App extends Component {
      * Add Events
      */
 
-    // let _socket = io();
+    let _socket = io();
 
-    let _socket = io('http://localhost:3030/');
+    // let _socket = io('http://localhost:3030/');
 
     _socket.on('connect', () => {
       it.setState({

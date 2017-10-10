@@ -402,7 +402,7 @@ class Index extends Component {
         bottom : 'auto',
         marginRight : '-50%',
         transform : 'translate(-50%, -50%)',
-        width : '72%',//openしているコンテンツの幅を変える,
+        width : '40%',//openしているコンテンツの幅を変える,
         zIndex: '100'
       }
     };
@@ -426,6 +426,8 @@ class Index extends Component {
         )
       }
     })
+
+    let debugMode = (this.props.player === 0) ? 'block' : 'none';
 
     return (
       <div className="app">
@@ -470,8 +472,8 @@ class Index extends Component {
               <button onClick={this.openBuyerModal.bind(this)}>アセットの買い付け</button>
               <button onClick={this.openSellerModal.bind(this)}>オープンマーケットで売る</button>
               <button onClick={this.openInitModal.bind(this)}>プレイヤー登録</button>
-              <button onClick={this.onClickDeleteDB.bind(this)}>DB-RM</button>
-              <button onClick={this.onClickCreateDB.bind(this)}>DB-CR</button>
+              <button style={{display: debugMode}} onClick={this.onClickDeleteDB.bind(this)}>DB-RM</button>
+              <button style={{display: debugMode}} onClick={this.onClickCreateDB.bind(this)}>DB-CR</button>
               <button onClick={this.closeCtrlModal.bind(this)}>閉じる</button>
             </Modal>
             <Modal
@@ -492,7 +494,7 @@ class Index extends Component {
                 </select></p>
 
               <p>
-                いくつ出品しますか？（上限６）<br/>
+                いくつ出品しますか？<br/>
                 <input ref="mdispamount" type="number"/>
               </p>
 
