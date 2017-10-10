@@ -21,3 +21,4 @@
   * [FAKEBILLS](components/02_AssetsCard_FAKEBILLS.png) (+2カード:2枚、+1カード:6枚)
   * [JEWELRY](components/02_AssetsCard_JEWELRY.png) (+2カード:2枚、+1カード:6枚)
   * [ARTS](components/02_AssetsCard_ARTS.png) (+2カード:2枚、+1カード:6枚)
+* [イベントカード 24枚]()
